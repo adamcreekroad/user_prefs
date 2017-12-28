@@ -8,7 +8,7 @@ module UserPrefs
 
   class << self
     def included(base)
-      validate_column_and_type(base) unless RUBY_ENGINE == :opal || pending_migrations?
+      # validate_column_and_type(base) unless RUBY_ENGINE == :opal || pending_migrations?
 
       base.class_eval do
         class_attribute :defined_prefs, :default_prefs
